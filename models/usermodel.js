@@ -5,14 +5,14 @@ var userSchema = new mongoose.Schema({
     Firstname:{
         type:String,
         required:true,
-        unique:true,
-        index:true,
+       
+       
     },
     Lastname:{
         type:String,
         required:true,
-        unique:true,
-        index:true,
+    
+      
     },
     email:{
         type:String,
@@ -20,9 +20,9 @@ var userSchema = new mongoose.Schema({
         unique:true,
     },
     mobile:{
-        type:String,
+        type:Number,
         required:true,
-        unique:true,
+       
     },
     password:{
         type:String,

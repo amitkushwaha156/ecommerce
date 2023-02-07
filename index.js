@@ -5,6 +5,7 @@ const PORT=process.env.PORT || 4000
 const auth = require("./routes/Authroutes")
 const bodyParser = require("body-parser")
 const connect= require('./config/connect')
+const {notfound,errorhndler}=require('./middelweres/errorHandler')
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
@@ -12,9 +13,9 @@ app.use(bodyParser.urlencoded({
 }))
 
 app.use('/api/user',auth)
-app.get('/',(res,req)=>{
-    
-})
+
+app.use(notfound)
+app.use(errorhndler)
 
 app.listen(PORT,()=>{
     console.log(`server runing ${PORT}`)
