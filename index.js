@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({
     extended:false,
 }))
 
+app.use(express.json())
 app.use('/api/user',auth)
 
 app.use(notfound)

@@ -17,4 +17,4 @@ const errorhndler = (req, res, next) => {
     })
 }
 
-module.exports={errorhndler,notfound}
+module.exports= {errorhndler,notfound}
